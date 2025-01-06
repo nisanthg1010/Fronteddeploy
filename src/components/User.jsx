@@ -34,9 +34,10 @@ const User = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        backgroundColor: "#f0f8ff", // Light blue background
+        backgroundColor: "#f0f8ff", 
         minHeight: "100vh",
         padding: "20px",
+        fontFamily: "Times New Roman, serif",  
       }}
     >
       <h1 style={{ color: "#333" }}>User's Data</h1>

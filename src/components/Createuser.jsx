@@ -37,31 +37,30 @@ const Createuser = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        backgroundColor: "#f0f8ff",
+        backgroundColor: "#eef2f3", 
         height: "100vh",
         justifyContent: "center",
-        padding: "20px", // Added padding for smaller screens
+        padding: "20px",
       }}
     >
-      <h1>Create User</h1>
+      <h1 style={{ color: "#333", fontFamily: "Arial, sans-serif" }}>Create User</h1>
       <form
         onSubmit={handleSubmit}
         style={{
           display: "flex",
           flexDirection: "column",
           gap: "15px",
-          width: "100%", // Adjust width for responsiveness
-          maxWidth: "400px", // Limit maximum width for larger screens
+          width: "100%",
+          maxWidth: "400px",
           padding: "20px",
-          backgroundColor: "#ffffff",
-          borderRadius: "10px",
+          backgroundColor: "#fdfdfd",
+          borderRadius: "15px", 
           border: "1px solid #e0e0e0",
-          boxShadow:
-            "4px 4px 6px rgba(0, 0, 0, 0.2), -4px -4px 6px rgba(255, 255, 255, 0.8)", // 3D shadow effect
-          transform: "translateY(-2px)", // Slight lift
+          boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.1)", 
+          transition: "transform 0.2s",
         }}
       >
-        <label>
+        <label style={{ fontSize: "14px", color: "#555" }}>
           Name:
           <input
             type="text"
@@ -70,16 +69,15 @@ const Createuser = () => {
             onChange={handleChange}
             required
             style={{
-              padding: "8px",
-              borderRadius: "5px",
+              padding: "10px",
+              borderRadius: "8px",
               border: "1px solid #ccc",
-              boxShadow:
-                "inset 2px 2px 5px rgba(0, 0, 0, 0.1), inset -2px -2px 5px rgba(255, 255, 255, 0.7)", // Inner shadow for input
-              width: "100%",
+              boxShadow: "inset 0px 2px 5px rgba(0, 0, 0, 0.05)",
+              marginTop: "5px",
             }}
           />
         </label>
-        <label>
+        <label style={{ fontSize: "14px", color: "#555" }}>
           Phone:
           <input
             type="text"
@@ -88,16 +86,15 @@ const Createuser = () => {
             onChange={handleChange}
             required
             style={{
-              padding: "8px",
-              borderRadius: "5px",
+              padding: "10px",
+              borderRadius: "8px",
               border: "1px solid #ccc",
-              boxShadow:
-                "inset 2px 2px 5px rgba(0, 0, 0, 0.1), inset -2px -2px 5px rgba(255, 255, 255, 0.7)", // Inner shadow for input
-              width: "100%",
+              boxShadow: "inset 0px 2px 5px rgba(0, 0, 0, 0.05)",
+              marginTop: "5px",
             }}
           />
         </label>
-        <label>
+        <label style={{ fontSize: "14px", color: "#555" }}>
           Email:
           <input
             type="email"
@@ -106,28 +103,29 @@ const Createuser = () => {
             onChange={handleChange}
             required
             style={{
-              padding: "8px",
-              borderRadius: "5px",
+              padding: "10px",
+              borderRadius: "8px",
               border: "1px solid #ccc",
-              boxShadow:
-                "inset 2px 2px 5px rgba(0, 0, 0, 0.1), inset -2px -2px 5px rgba(255, 255, 255, 0.7)", // Inner shadow for input
-              width: "100%",
+              boxShadow: "inset 0px 2px 5px rgba(0, 0, 0, 0.05)",
+              marginTop: "5px",
             }}
           />
         </label>
         <button
           type="submit"
           style={{
-            padding: "10px",
+            padding: "12px",
             cursor: "pointer",
             backgroundColor: "#4caf50",
             color: "white",
             border: "none",
-            borderRadius: "4px",
-            boxShadow:
-              "2px 2px 6px rgba(0, 0, 0, 0.2), -2px -2px 6px rgba(255, 255, 255, 0.8)", // 3D button shadow
-            width: "100%", // Full-width button
+            borderRadius: "8px",
+            fontWeight: "bold",
+            boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+            transition: "background-color 0.3s",
           }}
+          onMouseOver={(e) => (e.target.style.backgroundColor = "#45a049")}
+          onMouseOut={(e) => (e.target.style.backgroundColor = "#4caf50")}
         >
           Create User
         </button>
@@ -143,27 +141,6 @@ const Createuser = () => {
       >
         Back to User List
       </Link>
-      <style>
-        {`
-          @media (max-width: 600px) {
-            h1 {
-              font-size: 24px;
-            }
-            form {
-              padding: 15px;
-            }
-          }
-          @media (max-width: 400px) {
-            h1 {
-              font-size: 20px;
-            }
-            button {
-              padding: 8px;
-              font-size: 14px;
-            }
-          }
-        `}
-      </style>
     </div>
   );
 };

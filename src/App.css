@@ -85,4 +85,34 @@
   .delete-button:hover {
     background-color: #d32f2f;
   }
-  
+  /* Form container styles */
+.create-user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #f9fafc; /* Background color */
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2), -4px -4px 6px rgba(255, 255, 255, 0.8);
+  transform: translateY(-2px);
+}
+/* Global styles */
+body {
+  background-color: #eef2f3; /* Light pastel background color */
+  margin: 0; /* Remove default margin */
+  font-family: Arial, sans-serif; /* Default font */
+}
+
+h1 {
+  font-size: 2rem;
+  color: #333;
+  font-weight: bold;
+}
+
+a {
+  color: #007bff; /* Link color */
+  text-decoration: none; /* Remove underline */
+}
