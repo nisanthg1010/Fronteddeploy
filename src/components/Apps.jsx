@@ -8,7 +8,8 @@ const Apps = () => {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<User />} />
-                <Route path="/create" element={<Createuser />} />
+                <Route path="/create"cd react
+                 element={<Createuser />} />
                 <Route path="/update/:id" element={<Updateuser />} />
             </Routes>
         </BrowserRouter>

@@ -34,10 +34,10 @@ const User = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        backgroundColor: "#f0f8ff", 
+        backgroundColor: "#f0f8ff", // Light blue background
         minHeight: "100vh",
         padding: "20px",
-        fontFamily: "Times New Roman, serif",  
+        fontFamily: "Times New Roman, serif",
       }}
     >
       <h1 style={{ color: "#333" }}>User's Data</h1>
@@ -60,13 +60,13 @@ const User = () => {
           borderCollapse: "collapse",
           width: "80%",
           marginTop: "20px",
-          backgroundColor: "#fff", 
+          backgroundColor: "#fff",
           border: "1px solid #ccc",
         }}
       >
         <thead
           style={{
-            backgroundColor: "#4caf50", 
+            backgroundColor: "#4caf50",
             color: "white",
           }}
         >
@@ -83,7 +83,7 @@ const User = () => {
             <tr
               key={user._id}
               style={{
-                backgroundColor: "#f9f9f9", 
+                backgroundColor: "#f9f9f9",
                 textAlign: "center",
               }}
             >
@@ -91,31 +91,41 @@ const User = () => {
               <td>{user.name}</td>
               <td>{user.phone}</td>
               <td>{user.email}</td>
-              <td>
+              <td
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  gap: "10px",
+                }}
+              >
                 <Link
                   id="link"
                   to={`/update/${user._id}`}
                   style={{
-                    marginRight: "10px",
                     padding: "5px 10px",
                     backgroundColor: "#2196f3",
                     color: "white",
                     textDecoration: "none",
                     borderRadius: "4px",
+                    fontSize: "14px", // Same font size for both buttons
+                    whiteSpace: "nowrap",
                   }}
                 >
-                  Update User
+                  Update
                 </Link>
                 <button
                   id="kem"
                   onClick={() => handleDelete(user._id)}
                   style={{
                     padding: "5px 10px",
-                    backgroundColor: "#f44336", 
+                    backgroundColor: "#f44336",
                     color: "white",
-                    border: "none",
+                   // border: "none",
+                    textDecoration: "none",
                     borderRadius: "4px",
                     cursor: "pointer",
+                    fontSize: "14px", // Same font size for both buttons
+                    whiteSpace: "nowrap",
                   }}
                 >
                   Delete
