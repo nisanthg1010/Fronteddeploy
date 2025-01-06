@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Createuser from './Createuser';
-import Updateuser from './updateuser';
+import Updateuser from './Updateuser';
 import User from  './user';
 
 const Apps = () => {
